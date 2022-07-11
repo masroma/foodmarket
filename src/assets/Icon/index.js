@@ -5,6 +5,8 @@ import IconOrder from './ic_order_normal.svg';
 import IconOrderActive from './ic_order.svg';
 import IconProfile from './ic_profile_normal.svg';
 import IconProfileActive from './ic_profile.svg';
+import StarOn from './star_on.svg';
+import StarOff from './star_off.svg';
 
 export {
     IconArrowBack,
@@ -13,5 +15,7 @@ export {
     IconOrder,
     IconOrderActive,
     IconProfile,
-    IconProfileActive
+    IconProfileActive,
+    StarOn,
+    StarOff
 }

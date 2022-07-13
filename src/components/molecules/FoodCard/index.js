@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { pic_food1, StarOff, StarOn } from '../../../assets'
+import Rating from '../Rating'
 
 const FoodCard = ({image, title}) => {
   return (
@@ -8,16 +9,7 @@ const FoodCard = ({image, title}) => {
         <Image style={styles.image} source={image} />
         <View style={styles.content}>
         <Text style={styles.titleFood}>{title}</Text>
-            <View style={styles.rating}>
-                <View style={styles.star}>
-                    <StarOn/>
-                    <StarOn/>
-                    <StarOn/>
-                    <StarOn/>
-                    <StarOff/>
-                </View>
-                <Text>4.5</Text>
-            </View>
+            <Rating/>
         </View>
     </View>
   )

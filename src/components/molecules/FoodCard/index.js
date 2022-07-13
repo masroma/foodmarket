@@ -2,12 +2,12 @@ import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { pic_food1, StarOff, StarOn } from '../../../assets'
 
-const FoodCard = ({image}) => {
+const FoodCard = ({image, title}) => {
   return (
     <View style={styles.container}>
         <Image style={styles.image} source={image} />
         <View style={styles.content}>
-        <Text style={styles.titleFood}>Nasi Goreng Abah</Text>
+        <Text style={styles.titleFood}>{title}</Text>
             <View style={styles.rating}>
                 <View style={styles.star}>
                     <StarOn/>
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     },
     image:{width:'100%', resizeMode:'cover', height:140,  borderTopLeftRadius:8, borderTopRightRadius:8},
     content:{padding:12},
-    titleFood:{fontSize:16, fontFamily:'Poppins-Regular', color:'#020202'},
+    titleFood:{fontSize:14, fontFamily:'Poppins-Medium', color:'#020202'},
     rating:{flexDirection:'row', justifyContent:'space-between'},
     star:{flexDirection:'row'}
 })

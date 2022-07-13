@@ -11,7 +11,7 @@ const SignIn = ({navigation}) => {
             <Gap height={16}/>
             <TxtInput label="password" placeholder="type your password"/>
             <Gap height={24} />
-            <Button text="Sig In" bgcolor="#FFC700" textcolor="#020202"/>
+            <Button text="Sig In" bgcolor="#FFC700" textcolor="#020202"  onPress={() => navigation.navigate('MainApp')}/>
             <Gap height={12}/>
             <Button text="Create new acoount" bgcolor="#8D92A3" textcolor="white" onPress={() => navigation.navigate('SignUp')}/>
         </View>

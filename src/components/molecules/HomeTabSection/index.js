@@ -10,11 +10,11 @@ import { useNavigation } from '@react-navigation/native'
 const NewTaste = () => {
   const navigation = useNavigation();
   return (
-    <View style={{ paddingTop: 10, flex:1}}>
-      <ItemListFood image={pic_food1} onPress={() => navigation.navigate('FoodDetail')}/>
-      <ItemListFood image={pic_food2} onPress={() => navigation.navigate('FoodDetail')}/>
-      <ItemListFood image={pic_food3} onPress={() => navigation.navigate('FoodDetail')}/>
-      <ItemListFood image={pic_food4} onPress={() => navigation.navigate('FoodDetail')}/>
+    <View style={{ paddingTop: 10, flex:1, paddingHorizontal:24}}>
+      <ItemListFood rating={4} image={pic_food1} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={4} image={pic_food2} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={4} image={pic_food3} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={4} image={pic_food4} onPress={() => navigation.navigate('FoodDetail')}/>
     </View>
   );
 };
@@ -22,11 +22,11 @@ const NewTaste = () => {
 const SecondRoute= () => {
   const navigation = useNavigation();
   return (
-    <View style={{ paddingTop: 10, flex:1}}>
-      <ItemListFood image={pic_food1} onPress={() => navigation.navigate('FoodDetail')}/>
-      <ItemListFood image={pic_food2} onPress={() => navigation.navigate('FoodDetail')}/>
-      <ItemListFood image={pic_food3} onPress={() => navigation.navigate('FoodDetail')}/>
-      <ItemListFood image={pic_food4} onPress={() => navigation.navigate('FoodDetail')}/>
+    <View style={{ paddingTop: 10, flex:1,  paddingHorizontal:24}}>
+      <ItemListFood rating={4} image={pic_food1} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={4} image={pic_food2} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={4} image={pic_food3} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={4} image={pic_food4} onPress={() => navigation.navigate('FoodDetail')}/>
     </View>
   );
 };

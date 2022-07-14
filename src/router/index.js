@@ -2,7 +2,7 @@ import React from "react";
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Home, Order, Profile, SignIn, SignUp, SignUpAddress, SignUpSuccess, SplashScreen } from "../pages";
+import { FoodDetail, Home, Order, Profile, SignIn, SignUp, SignUpAddress, SignUpSuccess, SplashScreen } from "../pages";
 import { BottomNavigator } from "../components";
 
 const Stack = createNativeStackNavigator();
@@ -27,7 +27,7 @@ const Router = () => {
             <Stack.Screen name="SignUp" component={SignUp} options={{ headerShown: false }}/>
             <Stack.Screen name="SignUpAddress" component={SignUpAddress} options={{ headerShown: false }}/>
             <Stack.Screen name="SignUpSuccess" component={SignUpSuccess} options={{ headerShown: false }}/>
-           
+            <Stack.Screen name="FoodDetail" component={FoodDetail} options={{ headerShown: false }}/>
             <Stack.Screen name="MainApp" component={MainApp} options={{ headerShown: false }}/>
         </Stack.Navigator>
    );

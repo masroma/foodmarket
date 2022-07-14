@@ -3,27 +3,30 @@ import { StyleSheet, Text, View, useWindowDimensions, Dimensions } from 'react-n
 import { TabView, TabBar, SceneMap } from 'react-native-tab-view';
 import { pic_food1, pic_food2, pic_food3, pic_food4 } from '../../../assets';
 import ItemListFood from '../ItemListFood';
+import { useNavigation } from '@react-navigation/native'
 
 
 
 const NewTaste = () => {
+  const navigation = useNavigation();
   return (
     <View style={{ paddingTop: 10, flex:1}}>
-      <ItemListFood image={pic_food1}/>
-      <ItemListFood image={pic_food2}/>
-      <ItemListFood image={pic_food3}/>
-      <ItemListFood image={pic_food4}/>
+      <ItemListFood image={pic_food1} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood image={pic_food2} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood image={pic_food3} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood image={pic_food4} onPress={() => navigation.navigate('FoodDetail')}/>
     </View>
   );
 };
 
 const SecondRoute= () => {
+  const navigation = useNavigation();
   return (
     <View style={{ paddingTop: 10, flex:1}}>
-      <ItemListFood image={pic_food1}/>
-      <ItemListFood image={pic_food2}/>
-      <ItemListFood image={pic_food3}/>
-      <ItemListFood image={pic_food4}/>
+      <ItemListFood image={pic_food1} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood image={pic_food2} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood image={pic_food3} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood image={pic_food4} onPress={() => navigation.navigate('FoodDetail')}/>
     </View>
   );
 };

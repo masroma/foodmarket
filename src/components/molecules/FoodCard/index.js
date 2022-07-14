@@ -1,17 +1,22 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { pic_food1, StarOff, StarOn } from '../../../assets'
 import Rating from '../Rating'
+import { useNavigation } from '@react-navigation/native'
 
 const FoodCard = ({image, title}) => {
+const navigation = useNavigation();
   return (
-    <View style={styles.container}>
-        <Image style={styles.image} source={image} />
-        <View style={styles.content}>
-        <Text style={styles.titleFood}>{title}</Text>
-            <Rating/>
-        </View>
-    </View>
+    <TouchableOpacity activeOpacity={0.7}  style={styles.container} onPress={() => navigation.navigate('FoodDetail')}>
+        <View>
+                <Image style={styles.image} source={image} />
+                <View style={styles.content}>
+                <Text style={styles.titleFood}>{title}</Text>
+                    <Rating/>
+                </View>
+            </View>
+    </TouchableOpacity>
+   
   )
 }
 

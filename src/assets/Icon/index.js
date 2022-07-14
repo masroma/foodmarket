@@ -7,6 +7,9 @@ import IconProfile from './ic_profile_normal.svg';
 import IconProfileActive from './ic_profile.svg';
 import StarOn from './star_on.svg';
 import StarOff from './star_off.svg';
+import IconBackWhite from './ic_back_white.svg';
+import BtnMin from './btn_min.svg';
+import BtnAdd from './btn_add.svg'
 
 export {
     IconArrowBack,
@@ -17,5 +20,8 @@ export {
     IconProfile,
     IconProfileActive,
     StarOn,
-    StarOff
+    StarOff,
+    IconBackWhite,
+    BtnAdd,
+    BtnMin
 }

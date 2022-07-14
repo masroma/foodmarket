@@ -30,7 +30,7 @@ const Home = () => {
 
 
   return (
-   
+  
    
       <View style={styles.page}>
        <ScrollView  >

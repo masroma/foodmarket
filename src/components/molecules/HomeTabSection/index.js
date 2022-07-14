@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, useWindowDimensions } from 'react-native'
+import { StyleSheet, Text, View, useWindowDimensions, Dimensions } from 'react-native'
 import { TabView, TabBar, SceneMap } from 'react-native-tab-view';
 import { pic_food1, pic_food2, pic_food3, pic_food4 } from '../../../assets';
 import ItemListFood from '../ItemListFood';
@@ -8,7 +8,7 @@ import ItemListFood from '../ItemListFood';
 
 const NewTaste = () => {
   return (
-    <View style={{ paddingTop: 10}}>
+    <View style={{ paddingTop: 10, flex:1}}>
       <ItemListFood image={pic_food1}/>
       <ItemListFood image={pic_food2}/>
       <ItemListFood image={pic_food3}/>
@@ -17,9 +17,18 @@ const NewTaste = () => {
   );
 };
 
-const SecondRoute = () => (
-  <View style={{ flex: 1, backgroundColor: '#673ab7' }} />
-);
+const SecondRoute= () => {
+  return (
+    <View style={{ paddingTop: 10, flex:1}}>
+      <ItemListFood image={pic_food1}/>
+      <ItemListFood image={pic_food2}/>
+      <ItemListFood image={pic_food3}/>
+      <ItemListFood image={pic_food4}/>
+    </View>
+  );
+};
+
+const initialLayout = {width: Dimensions.get('window').width};
 
 const renderScene = SceneMap({
   first: NewTaste,
@@ -31,7 +40,7 @@ const renderTabBar = props => (
   <TabBar
     {...props}
     indicatorStyle={{ backgroundColor: '#020202', height: 3 }}
-    style={{ backgroundColor: 'white' }}
+    style={{ backgroundColor: 'white', elevation:0, shadowOpacity:0, borderBottomColor:'#F2F2F2', borderBottomWidth:1 }}
     tabStyle={{ width: 'auto' }}
     renderLabel={({ route, focused, color }) => (
       <Text style={{ fontFamily: 'Poppins-Medium', color: focused ? '#020202' : '#8D92A3' }}>
@@ -60,7 +69,8 @@ const HomeTabSection = () => {
       navigationState={{ index, routes }}
       renderScene={renderScene}
       onIndexChange={setIndex}
-      initialLayout={{ width: layout.width }}
+      initialLayout={initialLayout}
+      style={styles.tabs}
     />
 
   )
@@ -69,5 +79,5 @@ const HomeTabSection = () => {
 export default HomeTabSection
 
 const styles = StyleSheet.create({
-
+   tabs:{backgroundColor:'white'}
 })

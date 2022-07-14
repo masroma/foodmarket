@@ -10,7 +10,7 @@ const ItemListFood = ({image}) => {
         flexDirection: 'row',
         backgroundColor: 'white',
         paddingHorizontal: 24,
-        paddingVertical: 8,
+        paddingVertical: 15,
         alignItems:'center',
       }}>
         <Image source={image} style={{ width: 60, height: 60, overflow: 'hidden', borderRadius: 8, marginRight: 12 }} />

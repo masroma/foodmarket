@@ -9,7 +9,8 @@ import StarOn from './star_on.svg';
 import StarOff from './star_off.svg';
 import IconBackWhite from './ic_back_white.svg';
 import BtnMin from './btn_min.svg';
-import BtnAdd from './btn_add.svg'
+import BtnAdd from './btn_add.svg';
+import IconNext from './iconnext';
 
 export {
     IconArrowBack,
@@ -23,5 +24,6 @@ export {
     StarOff,
     IconBackWhite,
     BtnAdd,
-    BtnMin
+    BtnMin,
+    IconNext
 }

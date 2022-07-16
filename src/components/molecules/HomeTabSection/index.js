@@ -11,22 +11,34 @@ const NewTaste = () => {
   const navigation = useNavigation();
   return (
     <View style={{ paddingTop: 10, flex:1, paddingHorizontal:24}}>
-      <ItemListFood rating={4} image={pic_food1} onPress={() => navigation.navigate('FoodDetail')}/>
-      <ItemListFood rating={4} image={pic_food2} onPress={() => navigation.navigate('FoodDetail')}/>
-      <ItemListFood rating={4} image={pic_food3} onPress={() => navigation.navigate('FoodDetail')}/>
-      <ItemListFood rating={4} image={pic_food4} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={4.3} name="sate padang" type="product" price={20000}  image={pic_food1} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={4.1} name="nasi goreng" type="product" price={20000} image={pic_food2} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={4.4} name="sop iga" type="product" price={20000} image={pic_food3} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={4.5} name="iga bakar" type="product" price={20000} image={pic_food4} onPress={() => navigation.navigate('FoodDetail')}/>
     </View>
   );
 };
 
-const SecondRoute= () => {
+const Popular= () => {
   const navigation = useNavigation();
   return (
     <View style={{ paddingTop: 10, flex:1,  paddingHorizontal:24}}>
-      <ItemListFood rating={4} image={pic_food1} onPress={() => navigation.navigate('FoodDetail')}/>
-      <ItemListFood rating={4} image={pic_food2} onPress={() => navigation.navigate('FoodDetail')}/>
-      <ItemListFood rating={4} image={pic_food3} onPress={() => navigation.navigate('FoodDetail')}/>
-      <ItemListFood rating={4} image={pic_food4} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={3.9} name="kopi cua" type="product" price={20000} image={pic_food1} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={4.0} name="jus mangga" type="product" price={20000} image={pic_food2} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={3.7} name="nasi liwet" type="product" price={20000} image={pic_food3} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={4.1} name="nasi timbel" type="product" price={20000} image={pic_food4} onPress={() => navigation.navigate('FoodDetail')}/>
+    </View>
+  );
+};
+
+const Recommended= () => {
+  const navigation = useNavigation();
+  return (
+    <View style={{ paddingTop: 10, flex:1,  paddingHorizontal:24}}>
+      <ItemListFood rating={3.9} name="nasi padang" type="product" price={23000} image={pic_food1} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={4.0} name="nasi kebuli" type="product" price={18000} image={pic_food2} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={3.7} name="hamburger" type="product" price={22000} image={pic_food3} onPress={() => navigation.navigate('FoodDetail')}/>
+      <ItemListFood rating={4.1} name="ayam geprek" type="product" price={24000} image={pic_food4} onPress={() => navigation.navigate('FoodDetail')}/>
     </View>
   );
 };
@@ -35,8 +47,8 @@ const initialLayout = {width: Dimensions.get('window').width};
 
 const renderScene = SceneMap({
   first: NewTaste,
-  second: SecondRoute,
-  three: SecondRoute,
+  second: Popular,
+  three: Recommended,
 });
 
 const renderTabBar = props => (

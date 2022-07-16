@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { StarOff, StarOn } from '../../../assets'
 
-const Rating = () => {
+const Rating = ({rating}) => {
   return (
     <View>
       <View style={styles.rating}>
@@ -13,7 +13,7 @@ const Rating = () => {
                     <StarOn/>
                     <StarOff/>
                 </View>
-                <Text>4.5</Text>
+                <Text>{rating}</Text>
             </View>
     </View>
   )

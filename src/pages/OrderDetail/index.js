@@ -1,13 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { Button, Gap, Header, ItemValue, ItemListFood } from '../../components'
+import { Button, Header, ItemValue, ItemListFood, Gap } from '../../components'
 import { pic_food1 } from '../../assets'
 
-const OrderSummary = ({navigation}) => {
+const OrderDetail = ({navigation}) => {
   return (
-    <View>
-      <Header title="Payment" subtitle="You deserve better meal" onBack={() => {}}/>
-        <View style={styles.content}>
+   <ScrollView>
+     <View>
+     <Header title="Detail Transaction" subtitle="You deserve better meal" onBack={() => {}}/>
+     <View style={styles.content}>
           <Text style={styles.label}>Item Order</Text>
           <Gap height={8}/>
           <ItemListFood type="order-summary" name="kopi cua" price={20000} image={pic_food1} items={14}/>
@@ -29,27 +30,35 @@ const OrderSummary = ({navigation}) => {
           <ItemValue label="City" value="Jakarta Timur"/>
         </View>
         <Gap height={25}/>
-        <View style={styles.button}>
-          <Button text="Checkout Now" onPress={() => navigation.replace('OrderSuccess')}/>
+        <View style={styles.content}>
+        <Text  style={styles.label}>Order Status</Text>
+          <Gap height={8}/>
+          <ItemValue label="#FM209391" value="Paid"/>
         </View>
+        <Gap height={25}/>
+        <View style={styles.button}>
+          <Button bgcolor="#D9435E" textcolor='white' text="Cancel my order" onPress={() => navigation.replace('MainApp')}/>
+        </View>
+        <Gap height={25}/>
     </View>
+   </ScrollView>
   )
 }
 
-export default OrderSummary
+export default OrderDetail
 
 const styles = StyleSheet.create({
-  content:{
-    backgroundColor:'white',
-    paddingHorizontal:24,
-    paddingVertical:16
-  },
-  label:{
-    fontFamily:'Poppins-regular',
-    fontSize:14,
-    color:'#020202'
-  },
-  button:{
-    paddingHorizontal:24
-  }
+    content:{
+        backgroundColor:'white',
+        paddingHorizontal:24,
+        paddingVertical:16
+      },
+      label:{
+        fontFamily:'Poppins-regular',
+        fontSize:14,
+        color:'#020202'
+      },
+      button:{
+        paddingHorizontal:24
+      }
 })

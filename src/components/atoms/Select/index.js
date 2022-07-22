@@ -1,29 +1,30 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { Picker } from '@react-native-picker/picker';
+import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import {Picker} from '@react-native-picker/picker';
 
-const Select = ({label}) => {
-    return (
-        <View>
-            <Text style={styles.label}>{label}</Text>
-            <View style={styles.input}>
-                <Picker
-                    // selectedValue={selectedLanguage}
-                    // onValueChange={(itemValue, itemIndex) =>
-                    //     setSelectedLanguage(itemValue)
-                    // }
-                    >
-                    <Picker.Item label="Java" value="java" />
-                    <Picker.Item label="JavaScript" value="js" />
-                </Picker>
-            </View>
-        </View>
-    )
-}
+const Select = ({label, value, onSelectChange}) => {
+  return (
+    <View>
+      <Text style={styles.label}>{label}</Text>
+      <View style={styles.input}>
+        <Picker
+          selectedValue={value}
+          onValueChange={(itemValue) =>
+            onSelectChange(itemValue)
+          }>
+          <Picker.Item label="Bandung" value="bandung" />
+          <Picker.Item label="Jakarta" value="jakarta" />
+          <Picker.Item label="Jogjakarta" value="jogjakarta" />
+          <Picker.Item label="Surabaya" value="surabaya" />
+        </Picker>
+      </View>
+    </View>
+  );
+};
 
-export default Select
+export default Select;
 
 const styles = StyleSheet.create({
-    label:{fontSize:16, fontFamily:'Poppins-Regular', color:'#020202'},
-    input:{borderWidth:1, borderColor:'#020202',borderRadius:8}
-})
+  label: {fontSize: 16, fontFamily: 'Poppins-Regular', color: '#020202'},
+  input: {borderWidth: 1, borderColor: '#020202', borderRadius: 8},
+});

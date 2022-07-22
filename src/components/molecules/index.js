@@ -9,6 +9,7 @@ import EmptyOrder from "./EmptyOrder";
 import OrderTabSection from "./OrderTabSection"
 import ItemListFood from "./ItemListFood";
 import ProfileTabSection from "./ProfileTabSection";
+import Loading from "./Loading";
 export{
     Header,
     BottomNavigator,
@@ -20,6 +21,7 @@ export{
     EmptyOrder,
     OrderTabSection,
     ItemListFood,
-    ProfileTabSection
+    ProfileTabSection,
+    Loading
 
 }
